@@ -17,7 +17,13 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(cors());
+// Allow all origins, but don't allow credentials
+app.use(
+  cors({
+    origin: "*", // Allow all origins
+    credentials: false, // Disable credentials (cookies, auth headers, etc.)
+  })
+);
 
 app.use("/uploads", express.static(__dirname + "/uploads"));
 
