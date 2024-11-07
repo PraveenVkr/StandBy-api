@@ -17,11 +17,10 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-// Allow all origins, but don't allow credentials
 app.use(
   cors({
-    origin: "*", // Allow all origins
-    credentials: false, // Disable credentials (cookies, auth headers, etc.)
+    origin: ["http://localhost:5173", "https://your-frontend-domain.com"], // Allow these origins
+    credentials: true,
   })
 );
 
