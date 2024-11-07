@@ -19,7 +19,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://your-frontend-domain.com"], // Allow these origins
+    origin: ["http://localhost:5173", "https://standby-client.vercel.app/"], // Allow these origins
     credentials: true,
   })
 );
