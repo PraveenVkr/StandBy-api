@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://standby-client.vercel.app"], // Allow these origins
+    origin: ["http://localhost:5173", "https://standbyme.vercel.app/"], // Allow these origins
     credentials: true, // Allow credentials (cookies, tokens, etc.)
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allow these methods
     allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"], // Allow these headers
