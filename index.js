@@ -18,12 +18,13 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://standbyme.vercel.app/"], // Allow these origins
-    credentials: true, // Allow credentials (cookies, tokens, etc.)
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allow these methods
-    allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"], // Allow these headers
+    origin: ["http://localhost:5173", "https://standbyme.vercel.app"], // No trailing slash here
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
   })
 );
+
 app.use("/uploads", express.static(__dirname + "/uploads"));
 
 const jwtSecret = process.env.JWT_SECRET;
